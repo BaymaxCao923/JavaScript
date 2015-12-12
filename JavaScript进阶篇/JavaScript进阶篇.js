@@ -703,6 +703,166 @@ Math对象：
 	document.write(myarr.sort(sortNum));//将数组降序排列
 	</script>
 
+window对象：
+	window对象是BOM的核心，window对象指当前的浏览器窗口。
+	<script type="text/javascript">
+	function openWindow(){
+	    window.open("http://www.imooc.com",'_top');
+	    window.resizeBy(600,400);
+	    alert("欢迎来到慕课网");//打开新窗口，弹出对话框
+	}
+	</script>
+
+	<form>
+	<input type="button" value="点击我，打开新窗口" onclick="openWindow()" />
+	</form>
+
+JavaScript计时器：
+	在JavaScript中，我们可以在设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。
+	计时器类型：
+	一次性计时器：仅在指定的延迟时间之后触发一次。
+	间隔性触发计时器：每隔一定的时间间隔就触发一次。
+
+计时器：setInterval(code,交互时间);
+	在执行时,从载入页面后每隔指定的时间执行代码。
+
+	参数说明：
+	1. 代码：要调用的函数或要执行的代码串。
+	2. 交互时间：周期性执行或调用表达式之间的时间间隔，以毫秒计（1s=1000ms）。
+
+	返回值:
+	一个可以传递给 clearInterval() 从而取消对"代码"的周期性执行的值。
+
+	调用函数格式(假设有一个clock()函数):
+	setInterval("clock()",1000)
+	或
+	setInterval(clock,1000)
+
+	<script type="text/javascript">
+	  var attime;
+	  function clock(){
+	    var time=new Date();          
+	    attime=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+	    document.getElementById("clock").value = attime;//将attime的值赋给id为clock的标签
+	  }
+	  setInterval(clock,100);
+	</script>
+
+	<form>
+	<input type="text" id="clock" size="50"  />
+	</form>
+
+取消计时器：clearInterval(id_of_setInterval);
+	clearInterval() 方法可取消由 setInterval() 设置的交互时间。
+	参数说明:
+	id_of_setInterval：由 setInterval() 返回的 ID 值。
+
+	<script type="text/javascript">
+	   function clock(){
+	      var time=new Date();               	  
+	      document.getElementById("clock").value = time;
+	   }
+	    var i=setInterval(clock,100);
+	</script>
+	<form>
+	  <input type="text" id="clock" size="50"  />
+	  <input type="button" value="Stop" onclick="clearInterval(i)"/>
+	</form>
+
+计时器：setTimeout(代码,延迟时间);
+	setTimeout()计时器，在载入后延迟指定时间后,去执行一次表达式,仅执行一次。
+	参数说明：
+	1. 要调用的函数或要执行的代码串。
+	2. 延时时间：在执行代码前需等待的时间，以毫秒为单位（1s=1000ms)。
+	参考"8-5setTimeout.html"。
+
+取消计时器：clearTimeout(id_of_setTimeout);
+	setTimeout()和clearTimeout()一起使用，停止计时器。
+	参数说明:
+	id_of_setTimeout：由 setTimeout() 返回的 ID 值。该值标识要取消的延迟执行代码块。
+
+History对象：window.history.[属性|方法]。注意：window可以省略。
+	history对象记录了用户曾经浏览过的页面(URL)，并可以实现浏览器前进与后退相似导航的功能。
+	注意:从窗口被打开的那一刻开始记录，每个浏览器窗口、每个标签页乃至每个框架，都有自己的history对象与特定的window对象关联。
+	<script type="text/javascript">
+	  var HL = window.history.length;
+	  document.write(HL);
+	</script>
+
+返回前一个浏览的页面：window.history.back();
+	back()方法，加载 history 列表中的前一个 URL。
+	注意：等同于点击浏览器的倒退按钮。
+	back()相当于go(-1),代码如下:
+	window.history.go(-1);
+	//参考"8-8返回前一个浏览的页面.html"
+
+返回下一个浏览的页面：window.history.forward();
+	forward()方法，加载 history 列表中的下一个 URL。
+	注意：等价点击前进按钮。
+	forward()相当于go(1),代码如下:
+	window.history.go(1);
+	// 参考"8-9返回下一个浏览页面.html"
+
+返回浏览历史中的其他页面：window.history.go(number);
+	go()方法，根据当前所处的页面，加载 history 列表中的某个具体的页面。
+
+	浏览器中，返回当前页面之前浏览过的第二个历史页面，代码如下：
+	window.history.go(-2);
+	注意：和在浏览器中单击两次后退按钮操作一样。
+	同理，返回当前页面之后浏览过的第三个历史页面，代码如下：
+	window.history.go(3);
+	// 参考"8-10返回浏览历史中的其他页面"
+
+Location对象：location.[属性|方法]
+	Location对象及方法参考文件夹内图片
+
+Navigator对象：
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>无标题文档</title>
+	</head>
+	<script type="text/javascript">
+		document.write("浏览器代码名的字符串表示："+navigator.appCodeName+"<br>");
+		document.write("浏览器的名称："+navigator.appName+"<br>");
+		document.write("浏览器的平台和版本信息："+navigator.appVersion+"<br>");
+		document.write("运行浏览器的操作系统平台："+navigator.platform+"<br>");
+		document.write("由客户机发送服务器的user-agent头部的值："+navigator.userAgent+"<br>");
+	</script>
+	<body>
+	</body>
+	</html>
+
+userAgent：navigator.userAgent;
+	返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)
+	// 参考"8-13userAgent.html"
+
+screen对象：window.screen.属性
+	对象属性参考图片。
+
+屏幕分辨率的宽高：
+	window.screen 对象包含有关用户屏幕的信息。
+	1. screen.height 返回屏幕分辨率的高
+	2. screen.width 返回屏幕分辨率的宽
+	注意：
+	1.单位以像素计。
+	2. window.screen 对象在编写时可以不使用 window 这个前缀。
+	<script type="text/javascript">
+		document.write( "屏幕宽度："+screen.width+"<br>");
+		document.write( "屏幕高度："+screen.height);//获取屏幕宽高
+	</script>
+
+屏幕可用宽高：
+	1. screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如任务栏。
+	2. screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如任务栏。
+	注意：
+	不同系统的任务栏默认高度不一样，及任务栏的位置可在屏幕上下左右任何位置，所以有可能可用宽度和高度不一样。
+	<script type="text/javascript">
+	document.write("可用宽度："+screen.availWidth+"<br>");
+	document.write("可用高度："+screen.availHeight);
+	</script>
+
 
 
 
