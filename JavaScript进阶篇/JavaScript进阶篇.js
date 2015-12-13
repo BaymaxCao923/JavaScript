@@ -123,7 +123,7 @@ JS在页面中的位置：
 数组属性length：myArray.length;//获得数据myArray的长度
 	如果我们想知道数组的大小，只需引用数组的一个属性length
 	注意：因为数组的索引总是由0开始，所以一个数组的上下限分别是：0和length-1
-		var arr=[55,32,5,90,60,98,76,54];//包含8个数值的数组arr 
+		var arr=[55,32,5,90,60,98,76,54];//包含8个数值的数组arr
 		document.write(arr.length); //显示数组长度8
 		document.write(arr[7]); //显示第8个元素的值54
 	JavaScript数组的length属性是可变的，这一点需要特别注意
@@ -139,9 +139,9 @@ JS在页面中的位置：
 	二维数组的表示: myarray[ ][ ]
 	注意: 二维数组的两个维度的索引值也是从0开始，两个维度的最后一个索引值为长度-1
 	定义方法一：
-		var myarr=new Array();  //先声明一维 
+		var myarr=new Array();  //先声明一维
 		for(var i=0;i<2;i++){   //一维长度为2
-		   myarr[i]=new Array();  //再声明二维 
+		   myarr[i]=new Array();  //再声明二维
 		   for(var j=0;j<3;j++){   //二维长度为3
 		   myarr[i][j]=i+j;   // 赋值，每个数组元素的值为i+j
 		   }
@@ -198,7 +198,7 @@ switch case语句：
 	}//切记不要忘记break！！！
 
 for循环：
-	for (var i = 0; i < 10.length; i++) 
+	for (var i = 0; i < 10.length; i++)
 		{
 
 		};
@@ -298,7 +298,7 @@ continue跳过本次循环：continue的作用是仅仅跳过本次循环，而�
 		}//只需要把document.write(sum); 改为 return sum;
 	还可以通过变量存储调用函数的返回值，代码如下:
 		result = add2(3,4);//语句执行后,result变量中的值为7。
-	注意:函数中参数和返回值不只是数字，还可以是字符串等其它类型。 
+	注意:函数中参数和返回值不只是数字，还可以是字符串等其它类型。
 
 事件：
 	JavaScript创建动态页面。事件是可以被JavaScript侦测到的行为。
@@ -362,13 +362,13 @@ onfocus事件：光标聚焦
 	<body>
 	请选择您的职业：<br>
 	  <form>
-	    <select name="career" onfocus="message()"> 
-	      <option>学生</option> 
-	      <option>教师</option> 
-	      <option>工程师</option> 
-	      <option>演员</option> 
-	      <option>会计</option> 
-	    </select> 
+	    <select name="career" onfocus="message()">
+	      <option>学生</option>
+	      <option>教师</option>
+	      <option>工程师</option>
+	      <option>演员</option>
+	      <option>会计</option>
+	    </select>
 	  </form>
 	</body>//鼠标单击下拉选择框时，弹出对话框
 
@@ -377,7 +377,7 @@ onblur事件：失去焦点
 	<script type="text/javascript">
 	  function message(){
 	    alert("请确定已输入密码后，在移开!"); }
-	</script>    
+	</script>
 	<body>
 	  <form>
 	   用户:<input name="username" type="text" value="请输入用户名！" >
@@ -390,7 +390,7 @@ onselect事件：内容选中
 	<script type="text/javascript">
 	  function message(){
 	    alert("您触发了选中事件！"); }
-	</script>    
+	</script>
 	<body>
 	  <form>
 	  个人简介：<br>
@@ -403,7 +403,7 @@ onchange事件：文本框内容改变
 	<script type="text/javascript">
 	  function message(){
 	    alert("您改变了文本内容！"); }
-	</script>    
+	</script>
 	<body>
 	  <form>
 	  个人简介：<br>
@@ -419,7 +419,7 @@ onload事件：加载页面事件
 	<script type="text/javascript">
 	  function message(){
 	    alert("加载中，请稍等…"); }
-	</script>    
+	</script>
 	<body onload="message()">
 	  欢迎学习JavaScript。
 	</body>
@@ -427,12 +427,12 @@ onload事件：加载页面事件
 onunload事件：退出页面事件
 	当用户退出页面时（页面关闭、页面刷新等），触发onUnload事件，同时执行被调用的程序。//页面关闭时无法调用，刷新可以调用
 	注意：不同浏览器对onunload事件支持不同。
-	<script type="text/javascript">   
-	     window.onunload = onunload_message;   
-	     function onunload_message(){   
-	        alert("您确定离开该网页吗？");   
-	    }   
-	</script>   
+	<script type="text/javascript">
+	     window.onunload = onunload_message;
+	     function onunload_message(){
+	        alert("您确定离开该网页吗？");
+	    }
+	</script>
 	<body>
 	  欢迎学习JavaScript。
 	</body>
@@ -477,7 +477,7 @@ onunload事件：退出页面事件
 
 返回 设置年份方法：get/setFullYear();
 	<script type="text/javascript">
-	var mydate=new Date(); 
+	var mydate=new Date();
 	var myyear=mydate.getFullYear();
 	document.write("年份:"+myyear);
 	</script>//输出当前年份，2015
@@ -741,7 +741,7 @@ JavaScript计时器：
 	<script type="text/javascript">
 	  var attime;
 	  function clock(){
-	    var time=new Date();          
+	    var time=new Date();
 	    attime=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
 	    document.getElementById("clock").value = attime;//将attime的值赋给id为clock的标签
 	  }
@@ -759,7 +759,7 @@ JavaScript计时器：
 
 	<script type="text/javascript">
 	   function clock(){
-	      var time=new Date();               	  
+	      var time=new Date();
 	      document.getElementById("clock").value = time;
 	   }
 	    var i=setInterval(clock,100);
@@ -862,14 +862,3 @@ screen对象：window.screen.属性
 	document.write("可用宽度："+screen.availWidth+"<br>");
 	document.write("可用高度："+screen.availHeight);
 	</script>
-
-
-
-
-
-
-
-
-
-
-
