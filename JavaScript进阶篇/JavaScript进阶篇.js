@@ -935,7 +935,38 @@ setAttribute(name, value)：
 	  文档          9
 	// 代码参见"9-7节点属性.html"
 
+访问子节点：elementNode.childNodes
+	访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。
+	注意：
+	如果选定的节点没有子节点，则该属性返回不包含节点的 NodeList。
+	// 代码参见"9-8访问子节点childNodes.html"
 
+访问子节点的第一项和最后一项：
+	firstChild:node.firstChild
+		属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。
+	lastChild:node.lastChild
+		属性返回‘childNodes’数组的最后一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。
+	注意: 上一节中，我们知道Internet Explorer 会忽略节点之间生成的空白文本节点，而其它浏览器不会。我们可以通过检测节点类型，过滤子节点。
+	// 代码参见"9-9 访问子结点的第一和最后项.html"
+
+访问父节点： elementNode.parentNode
+	获取指定节点的父节点
+	注意:父节点只能有一个
+	访问祖节点:elementNode.parentNode.parentNode
+	// 代码参见"9-10 访问父节点parentNode.html"
+
+访问兄弟节点：
+	1. nextSibling 属性可返回某个节点之后紧跟的节点（处于同一树层级中）。
+	语法：
+	nodeObject.nextSibling
+	说明：如果无此节点，则该属性返回 null。
+
+	2. previousSibling 属性可返回某个节点之前紧跟的节点（处于同一树层级中）。
+	语法：
+	nodeObject.previousSibling  
+	说明：如果无此节点，则该属性返回 null。
+	注意: 两个属性获取的是节点。Internet Explorer 会忽略节点间生成的空白文本节点（例如，换行符号），而其它浏览器不会忽略。
+	// 代码参见"9-11 访问兄弟节点.html"
 
 
 

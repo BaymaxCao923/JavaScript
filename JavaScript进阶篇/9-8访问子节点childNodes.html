@@ -1,0 +1,28 @@
+<!-- 1. 获取第一个DIV的子节点。
+2. 使用for遍历每个节点。
+3. 输出相应节点的属性。 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<div>
+  javascript  
+  <p>javascript</p>
+  <div>jQuery</div>
+  <h5>PHP</h5>
+</div>
+<script type="text/javascript">
+ var d=document.getElementsByTagName("div")[0].childNodes;
+ document.write("div子节点个数："+d.length+"<br>"+"<br>");
+ for(var i=0;i<d.length;i++)
+ {
+     document.write("名称："+d[i].nodeName+"<br>"+"类型："+d[i].nodeType+"<br>"+"值："+d[i].nodeValue+"<br>"+"<br>")
+ }
+ 
+ 
+</script>
+</body>
+</html>
