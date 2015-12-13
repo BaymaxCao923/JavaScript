@@ -1,0 +1,25 @@
+<!-- 在<script>的标签内容，获取所有LI标签，并输出相应节点的名称、节点的值、节点的类型 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>节点属性</title>
+</head>
+<body>
+  <ul>
+     <li>javascript</li>
+     <li>HTML/CSS</li>
+     <li>jQuery</li>     
+  </ul>
+  <script type="text/javascript">
+    var lists=document.getElementsByTagName("li");
+    for(var i=0;i<lists.length;i++)
+    {
+        var lname=lists[i].nodeName;
+        var lvalue=lists[i].nodeValue;
+        var ltype=lists[i].nodeType;
+        document.write(lname+"<br>"+lvalue+"<br>"+ltype+"<br>"+"<br>")
+    }
+  </script>
+</body>
+</html>
