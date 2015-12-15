@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
  <head>
-<<<<<<< HEAD
-  <title> new document </title>
-  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <title> new document </title>  
+  <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
   <script type="text/javascript">
 
-=======
-  <title> new document </title>  
-  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-  <script type="text/javascript"> 
-  
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
       window.onload = function(){
      // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
 		Highlight();
@@ -24,7 +17,6 @@
          var td=document.createElement("td");
          td.innerHTML="<input type='text'>";
          tr.appendChild(td);
-<<<<<<< HEAD
 
          td=document.createElement("td");
          td.innerHTML="<input type='text'>";
@@ -34,17 +26,6 @@
          td.innerHTML="<a href='javascript:' onclick='deleteRow(this)'>删除</a>";
          tr.appendChild(td);
 
-=======
-         
-         td=document.createElement("td");
-         td.innerHTML="<input type='text'>";
-         tr.appendChild(td);
-         
-         td=document.createElement("td");
-         td.innerHTML="<a href='javascript:' onclick='deleteRow(this)'>删除</a>";
-         tr.appendChild(td);
-         
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
          tbody.appendChild(tr);
          Highlight();
      }
@@ -55,11 +36,7 @@
          var tbody=document.getElementById("table").lastChild;
          tbody.removeChild(tr);
      }
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
      function Highlight()
      {
          var tbody=document.getElementById("table").lastChild;
@@ -78,25 +55,15 @@
      }
 
 
-<<<<<<< HEAD
   </script>
  </head>
  <body>
-=======
-  </script> 
- </head> 
- <body> 
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
 	   <table border="1" width="50%" id="table">
 	   <tr>
 		<th>学号</th>
 		<th>姓名</th>
 		<th>操作</th>
-<<<<<<< HEAD
 	   </tr>
-=======
-	   </tr>  
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
 
 	   <tr>
 		<td>xh001</td>
@@ -108,17 +75,9 @@
 		<td>xh002</td>
 		<td>刘小芳</td>
 		<td><a href="javascript:;" onclick="deleteRow(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
-<<<<<<< HEAD
 	   </tr>
-=======
-	   </tr>  
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
 
 	   </table>
 	   <input type="button" value="添加一行" onclick="addOne()"/>   <!--在添加按钮上添加点击事件  -->
  </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> parent of 2417417... Revert "JavaScript8、9章"
